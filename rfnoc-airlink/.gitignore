@@ -1,0 +1,5 @@
+build/
+xsim*log
+xsim_proj
+.Xil/
+.vscode/

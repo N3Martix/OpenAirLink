@@ -1,0 +1,9 @@
+# We first need to figure out our own path, in case this file is being included
+# from somewhere else (e.g., from a fpgadev/top/$device directory)
+OOT_FPGA_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
+# One include statement for every RFNoC block with its own subdirectory, which
+# itself will contain a Makefile.srcs
+include $(OOT_FPGA_DIR)/rfnoc_block_shiftright/Makefile.srcs
+
+LIB_IP_XCI_SRCS += $(LIB_IP_CMPLX_MUL_SRCS)
