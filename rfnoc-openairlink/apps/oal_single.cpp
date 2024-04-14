@@ -22,7 +22,7 @@
 #include <uhd/utils/graph_utils.hpp>
 #include <uhd/utils/math.hpp>
 #include <uhd/utils/safe_main.hpp>
-#include <rfnoc/airlink/shiftright_block_control.hpp>
+#include <rfnoc/openairlink/shiftright_block_control.hpp>
 #include <boost/format.hpp>
 #include <boost/program_options.hpp>
 #include <chrono>
@@ -36,7 +36,7 @@
 namespace po = boost::program_options;
 using uhd::rfnoc::radio_control;
 using uhd::rfnoc::fir_filter_block_control;
-using rfnoc::airlink::shiftright_block_control;
+using rfnoc::openairlink::shiftright_block_control;
 using namespace std::chrono_literals;
 
 /****************************************************************************
@@ -134,7 +134,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
         ("rx-freq", po::value<double>(&rx_freq)->default_value(3619.2e6), "Rx RF center frequency in Hz")
         ("tx-freq", po::value<double>(&tx_freq)->default_value(3619.2e6), "Tx RF center frequency in Hz")
         ("rx-gain", po::value<double>(&rx_gain)->default_value(0.0), "Rx RF center gain in Hz")
-        ("tx-gain", po::value<double>(&tx_gain)->default_value(20.0), "Tx RF center gain in Hz")
+        ("tx-gain", po::value<double>(&tx_gain)->default_value(0.0), "Tx RF center gain in Hz")
         ("rx-bw", po::value<double>(&rx_bw)->default_value(80e6), "RX analog frontend filter bandwidth in Hz")
         ("tx-bw", po::value<double>(&tx_bw)->default_value(80e6), "TX analog frontend filter bandwidth in Hz")
         ("udt", po::value<double>(&update_t)->default_value(1), "Time period to update emulator channel")
@@ -187,8 +187,8 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     fir_ctrl = graph->get_block<uhd::rfnoc::fir_filter_block_control>(fir_ctrl_id);
 
     // Create Shiftright block
-    rfnoc::airlink::shiftright_block_control::sptr sr_ctrl;
-    sr_ctrl = graph->get_block<rfnoc::airlink::shiftright_block_control>(shift_ctrl_id);
+    rfnoc::openairlink::shiftright_block_control::sptr sr_ctrl;
+    sr_ctrl = graph->get_block<rfnoc::openairlink::shiftright_block_control>(shift_ctrl_id);
 
     /************************************************************************
      * Set up radio
@@ -272,8 +272,9 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
         + setup_time;
     std::cout << "Issuing start stream cmd..." << std::endl;
     rx_radio_ctrl->issue_stream_cmd(stream_cmd, rx_chan);
-    std::cout << "Channel emulator is now running..." << std::endl;
+     
     std::cout << std::endl;
+    std::cout << "**********Emulation is Now Running**********" << std::endl;
 
     // Keep running and update channel
     std::string fir;
@@ -283,7 +284,10 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     // Check if script used
     if (vm.count("script")) {
         use_script = true;
-        std::cout << "Using Script Config..." << std::endl;
+        std::cout << "Using Script Mode..." << std::endl;
+    }
+    else {
+        std::cout << "Using Manual Mode..." << std::endl;
     }
 
     double elapsed_time = 0.0;
@@ -346,7 +350,9 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
         config_in.close();
     }
     else {
-        std::cout << "Warning: Could not open the script config at '" << config_path_script << "', using manually config instead." << std::endl;
+        if (use_script) {
+            std::cout << "Warning: Could not open the script config at '" << config_path_script << "', using manually config instead." << std::endl;
+        }
 
         while (not stop_signal_called) {
             if (is_csv_valid(config_path_manually)) {
