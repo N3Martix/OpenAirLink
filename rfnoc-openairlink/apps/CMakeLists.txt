@@ -39,30 +39,30 @@ target_link_libraries(init_shiftright_block
     ${UHD_LIBRARIES}
     ${Boost_LIBRARIES}
     -Wl,--no-as-needed
-    rfnoc-airlink
+    rfnoc-openairlink
 
 )
 
-add_executable(airlink_single
-    airlink_single.cpp
+add_executable(oal_single
+oal_single.cpp
 )
-target_link_libraries(airlink_single
+target_link_libraries(oal_single
     ${UHD_LIBRARIES}
     ${Boost_LIBRARIES}
     -Wl,--no-as-needed
-    rfnoc-airlink
+    rfnoc-openairlink
 
 )
-target_compile_definitions(airlink_single PRIVATE CMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+target_compile_definitions(oal_single PRIVATE CMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
 
-add_executable(airlink_dual
-    airlink_dual.cpp
+add_executable(oal_dual
+oal_dual.cpp
 )
-target_link_libraries(airlink_dual
+target_link_libraries(oal_dual
     ${UHD_LIBRARIES}
     ${Boost_LIBRARIES}
     -Wl,--no-as-needed
-    rfnoc-airlink
+    rfnoc-openairlink
 )
 
-target_compile_definitions(airlink_dual PRIVATE CMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+target_compile_definitions(oal_dual PRIVATE CMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")

@@ -19,7 +19,7 @@
 #include <uhd/exception.hpp>
 #include <uhd/rfnoc_graph.hpp>
 #include <uhd/utils/safe_main.hpp>
-#include <rfnoc/airlink/shiftright_block_control.hpp>
+#include <rfnoc/openairlink/shiftright_block_control.hpp>
 #include <boost/program_options.hpp>
 
 namespace po = boost::program_options;
@@ -54,14 +54,14 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     auto graph = uhd::rfnoc::rfnoc_graph::make(args);
 
     // Verify we have a shiftright block:
-    auto shiftright_blocks = graph->find_blocks<rfnoc::airlink::shiftright_block_control>("");
+    auto shiftright_blocks = graph->find_blocks<rfnoc::openairlink::shiftright_block_control>("");
     if (shiftright_blocks.empty()) {
         std::cout << "No shiftright block found." << std::endl;
         return EXIT_FAILURE;
     }
 
     auto shiftright_block =
-        graph->get_block<rfnoc::airlink::shiftright_block_control>(shiftright_blocks.front());
+        graph->get_block<rfnoc::openairlink::shiftright_block_control>(shiftright_blocks.front());
     if (!shiftright_block) {
         std::cout << "ERROR: Failed to extract block controller!" << std::endl;
         return EXIT_FAILURE;
