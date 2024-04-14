@@ -121,8 +121,8 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
 
     // setup config path
     std::string root = CMAKE_SOURCE_DIR;
-    std::string config_path_manually = root + "/channel_control/emu_singel_manually.csv";
-    std::string config_path_script = root + "/channel_control/emu_singel_script.csv";
+    std::string config_path_manually = root + "/channel_control/chan_singel_manually.csv";
+    std::string config_path_script = root + "/channel_control/chan_singel_script.csv";
     std::ifstream config_in;
 
     // setup the program options
