@@ -14,7 +14,7 @@
 ##############################################################################################
 
 cmake_minimum_required(VERSION 3.8)
-project(rfnoc-airlink CXX C)
+project(rfnoc-openairlink CXX C)
 
 ########################################################################
 # Setup install directories
@@ -170,7 +170,7 @@ if(UHD_FPGA_DIR)
     add_subdirectory(icores)
 endif()
 if(UHD_FOUND)
-    add_subdirectory(include/rfnoc/airlink)
+    add_subdirectory(include/rfnoc/openairlink)
     add_subdirectory(lib)
     add_subdirectory(apps)
 endif()

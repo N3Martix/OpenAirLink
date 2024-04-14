@@ -20,10 +20,10 @@
 
 # List any C++ sources here. If there are no sources (e.g., because there
 # is no block controller), then this directory will be skipped.
-list(APPEND rfnoc_example_sources
+list(APPEND rfnoc_openairlink_sources
     shiftright_block_control.cpp
 )
-if(NOT rfnoc_example_sources)
+if(NOT rfnoc_openairlink_sources)
     MESSAGE(STATUS "No C++ sources... skipping lib/")
     return()
 endif()
@@ -44,22 +44,22 @@ link_directories(
     ${Boost_LIBRARY_DIRS}
 )
 
-add_library(rfnoc-airlink SHARED
-    ${rfnoc_example_sources}
+add_library(rfnoc-openairlink SHARED
+    ${rfnoc_openairlink_sources}
 )
-target_link_libraries(rfnoc-airlink
+target_link_libraries(rfnoc-openairlink
     ${UHD_LIBRARIES}
     ${Boost_LIBRARIES}
     ${GNURADIO_ALL_LIBRARIES}
     ${ETTUS_LIBRARIES}
 )
-set_target_properties(rfnoc-airlink
+set_target_properties(rfnoc-openairlink
     PROPERTIES DEFINE_SYMBOL "rfnoc_airlink_EXPORTS")
 
 ########################################################################
 # Install built library files
 ########################################################################
-install(TARGETS rfnoc-airlink
+install(TARGETS rfnoc-openairlink
     LIBRARY DESTINATION lib${LIB_SUFFIX} # .so/.dylib file
     ARCHIVE DESTINATION lib${LIB_SUFFIX} # .lib file
     RUNTIME DESTINATION bin              # .dll file

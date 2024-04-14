@@ -13,12 +13,12 @@
     If not, see <https://www.gnu.org/licenses/>.
 **/
 
-#include <rfnoc/airlink/shiftright_block_control.hpp>
+#include <rfnoc/openairlink/shiftright_block_control.hpp>
 
 #include <uhd/rfnoc/defaults.hpp>
 #include <uhd/rfnoc/registry.hpp>
 
-using namespace rfnoc::airlink;
+using namespace rfnoc::openairlink;
 using namespace uhd::rfnoc;
 
 const uint32_t shiftright_block_control::REG_SHIFTRIGHT_VALUE = 0x00;

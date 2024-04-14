@@ -13,14 +13,14 @@
     If not, see <https://www.gnu.org/licenses/>.
 **/
 
-#ifndef INCLUDED_RFNOC_AIRLINK_SHIFTRIGHT_BLOCK_CONTROL_HPP
-#define INCLUDED_RFNOC_AIRLINK_SHIFTRIGHT_BLOCK_CONTROL_HPP
+#ifndef INCLUDED_RFNOC_OPENAIRLINK_SHIFTRIGHT_BLOCK_CONTROL_HPP
+#define INCLUDED_RFNOC_OPENAIRLINK_SHIFTRIGHT_BLOCK_CONTROL_HPP
 
 #include <uhd/config.hpp>
 #include <uhd/rfnoc/noc_block_base.hpp>
 #include <uhd/types/stream_cmd.hpp>
 
-namespace rfnoc { namespace airlink {
+namespace rfnoc { namespace openairlink {
 
 /*! Block controller for the shiftright block: right shifts signal by given bits
  *
