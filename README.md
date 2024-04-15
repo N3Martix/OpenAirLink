@@ -1,8 +1,8 @@
-# AirLink: Reproducible Wireless Channel Emulation using Software Defined Radios
+# OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios
 
 An open-source channel emulator for reproducible testing of wireless mobility scenarios.
 The emulator implements a FIR filter on Software Defined Radios, the NI USRP (formerly by Ettus). 
-AirLink was developed by the [Chair of Communication Networks](https://www.ce.cit.tum.de/lkn/startseite/) at the Technical University of Munich. 
+OpenAirLink was developed by the [Chair of Communication Networks](https://www.ce.cit.tum.de/lkn/startseite/) at the Technical University of Munich. 
 
 ## Requirements
 - UHD 4.4
@@ -51,7 +51,7 @@ If OpenAirLink is correctly installed, the output should look like:
 Lanuch OpenAirLink by:
 ```
 cd ~/OpenAirLink/rfnoc-openairlink/build
-LD_PRELOAD=usr/local/lib/librfnoc-openairlink.so ./apps/oal_singel
+LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so ./apps/oal_singel
 ```
 OpenAirLink also supports two channels running independently and simultaneously. To do so, replace 'oal_single' with 'oal_dual'.
 
