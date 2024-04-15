@@ -32,7 +32,7 @@ uhd_image_loader --args="type=x300" --fpga-path="usrp_x310_fpga_HG.bit"
 ```
 To check installation, run:
 ```
-LD_PRELOAD=usr/local/lib/librfnoc-openairlink.so uhd_usrp_probe
+LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so uhd_usrp_probe
 ```
 If OpenAirLink is correctly installed, the output should look like:
 ```
