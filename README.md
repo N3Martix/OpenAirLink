@@ -53,11 +53,11 @@ Lanuch OpenAirLink by:
 cd ~/OpenAirLink/rfnoc-openairlink/build
 LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so ./apps/oal_singel
 ```
-OpenAirLink also supports two channels running independently and simultaneously. To do so, replace 'oal_single' with 'oal_dual'.
+OpenAirLink also supports two channels running independently and simultaneously. To do so, replace `oal_single` with `oal_dual`.
 
 The OpenAirLink's channel configuration has two models:
 
-- **Manually**: By default, OpenAirLink periodically scans the configuration file in the `channel_control/` folder to update the channel. The frequency of updates can be adjusted using the '--udt' argument.
+- **Manually**: By default, OpenAirLink periodically scans the configuration file in the `channel_control/` folder to update the channel. The frequency of updates can be adjusted using the `--udt` argument.
 - **Script**: The configuration is sent to the USRP if the emulator's running time exceeds its time index. To run the script mode, use the argument `--script`.
 
 ## Currently Supported Hardware
