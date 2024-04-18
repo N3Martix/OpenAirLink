@@ -309,7 +309,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
             if (elapsed_time >= curr_index) {
                 std::cout << std::chrono::system_clock::to_time_t(std::chrono::system_clock::now()) << std::endl;
                 std::getline(config_in, fir, ',');
-                std::getline(config_in, bit, ',');
+                std::getline(config_in, bit);
 
                 fir_coeffs = fir_parser(fir);
                 bit_shift  = static_cast<uint32_t>(std::stoi(bit));
@@ -359,7 +359,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
                 config_in.open(config_path_manually);
 
                 std::getline(config_in, fir, ',');
-                std::getline(config_in, bit, ',');
+                std::getline(config_in, bit);
                 fir_coeffs = fir_parser(fir);
                 bit_shift  = static_cast<uint32_t>(std::stoi(bit));
 

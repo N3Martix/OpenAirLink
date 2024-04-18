@@ -337,7 +337,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
                 sr0_ctrl->set_shiftright_value(bit_shift);
 
                 std::getline(config_in, fir, ',');
-                std::getline(config_in, bit, ',');
+                std::getline(config_in, bit);
                 fir_coeffs = fir_parser(fir);
                 bit_shift  = static_cast<uint32_t>(std::stoi(bit));
 
@@ -403,7 +403,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
                 sr0_ctrl->set_shiftright_value(bit_shift);
 
                 std::getline(config_in, fir, ',');
-                std::getline(config_in, bit, ',');
+                std::getline(config_in, bit);
                 fir_coeffs = fir_parser(fir);
                 bit_shift  = static_cast<uint32_t>(std::stoi(bit));
 
