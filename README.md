@@ -48,7 +48,9 @@ If OpenAirLink is correctly installed, the output should look like:
 ```
 
 ## Usage
-Lanuch OpenAirLink by:
+**1. Lanuch OpenAirLink**
+
+Lanuch with follow command:
 ```
 cd ~/OpenAirLink/rfnoc-openairlink/build
 LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so ./apps/oal_singel
@@ -59,6 +61,10 @@ The OpenAirLink's channel configuration has two models:
 
 - **Manually**: By default, OpenAirLink periodically scans the configuration file in the `channel_control/` folder to update the channel. The frequency of updates can be adjusted using the `--udt` argument.
 - **Script**: The configuration is sent to the USRP if the emulator's running time exceeds its time index. To run the script mode, use the argument `--script`.
+
+**2. Channel coefficient generation**
+ TODO
+
 
 ## Currently Supported Hardware
 1. [NI USRP X310](https://www.ettus.com/all-products/x310-kit/])
