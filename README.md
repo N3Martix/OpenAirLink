@@ -53,7 +53,7 @@ If OpenAirLink is correctly installed, the output should look like:
 Lanuch with follow command:
 ```
 cd ~/OpenAirLink/rfnoc-openairlink/build
-LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so ./apps/oal_singel
+LD_PRELOAD=/usr/local/lib/librfnoc-openairlink.so ./apps/oal_single
 ```
 OpenAirLink also supports two channels running independently and simultaneously. To do so, replace `oal_single` with `oal_dual`.
 
