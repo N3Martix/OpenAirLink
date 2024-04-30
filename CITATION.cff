@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Deshpande"
+  given-names: "Yash"
+  orcid: "https://orcid.org/0000-0003-4721-2492"
+- family-names: "Wang"
+  given-names: "Xianglong"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Kellerer"
+  given-names: "Wolfgang"
+  orcid: "https://orcid.org/0000-0003-4358-8038"
+title: "OpenAirLink"
+version: 1.0.0
+doi: https://doi.org/10.48550/arXiv.2404.09660
+date-released: 2024-04-15
+url: "https://github.com/N3Martix/OpenAirLink"
+preferred-citation:
+  type: article
+  authors:
+- family-names: "Deshpande"
+  given-names: "Yash"
+  orcid: "https://orcid.org/0000-0003-4721-2492"
+- family-names: "Wang"
+  given-names: "Xianglong"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Kellerer"
+  given-names: "Wolfgang"
+  orcid: "https://orcid.org/0000-0003-4358-8038"
+  doi: "10.0000/00000"
+  journal: "Arxiv Preprint"
+  month: 
+  start:  # First page number
+  end:  # Last page number
+  title: "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios"
+  issue: 1
+  volume: 1
+  year: 2024
+  doi: https://doi.org/10.48550/arXiv.2404.09660
