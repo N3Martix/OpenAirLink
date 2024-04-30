@@ -27,7 +27,7 @@ preferred-citation:
 - family-names: "Kellerer"
   given-names: "Wolfgang"
   orcid: "https://orcid.org/0000-0003-4358-8038"
-  doi: "10.0000/00000"
+  doi: https://doi.org/10.48550/arXiv.2404.09660
   journal: "Arxiv Preprint"
   month: 
   start:  # First page number
@@ -36,4 +36,4 @@ preferred-citation:
   issue: 1
   volume: 1
   year: 2024
-  doi: https://doi.org/10.48550/arXiv.2404.09660
+  
