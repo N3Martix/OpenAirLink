@@ -70,6 +70,11 @@ The OpenAirLink's channel configuration has two models:
 1. [NI USRP X310](https://www.ettus.com/all-products/x310-kit/])
 
 ## Citing AirLink 
+Please use the citation file provided in the repository. For quick access: 
+
+```
+Deshpande, Y., Wang, X., & Kellerer, W. (2024). OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios. arXiv preprint arXiv:2404.09660.
+```
 
 ## Contributors 
 1. Xianglong Wang
