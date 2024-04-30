@@ -1,22 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+title: OpenAirLink
+message: 'If you use this software, please cite it as below.'
+type: software
 authors:
-- family-names: "Deshpande"
-  given-names: "Yash"
-  orcid: "https://orcid.org/0000-0003-4721-2492"
-- family-names: "Wang"
-  given-names: "Xianglong"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-- family-names: "Kellerer"
-  given-names: "Wolfgang"
-  orcid: "https://orcid.org/0000-0003-4358-8038"
-title: "OpenAirLink"
+  - given-names: 'Yash  '
+    family-names: Deshpande
+    email: yash.deshpande@tum.de
+    orcid: 'https://orcid.org/0000-0003-4721-2492'
+  - given-names: Xianglong
+    family-names: Wang
+    email: xianglong.wang@tumd.de
+  - given-names: Wolfgang
+    family-names: Kellerer
+    orcid: 'https://orcid.org/0000-0003-4358-8038'
+repository-code: 'https://github.com/N3Martix/OpenAirLink'
+license: GPL-3.0
 version: 1.0.0
-date-released: "2024-04-15"
-url: "https://github.com/N3Martix/OpenAirLink"
+date-released: '2024-04-15'
 preferred-citation:
-type: article
-authors:
+ type: article
+ authors:
   - family-names: "Deshpande"
     given-names: "Yash"
     orcid: "https://orcid.org/0000-0003-4721-2492"
@@ -24,13 +30,13 @@ authors:
     given-names: "Xianglong"
     orcid: "https://orcid.org/0000-0000-0000-0000"
   - family-names: "Kellerer"
-    given-names: "WoDeshpandelfgang"
+    given-names: "Wolfgang"
     orcid: "https://orcid.org/0000-0003-4358-8038"
-doi: https://doi.org/10.48550/arXiv.2404.09660
-journal: "Arxiv Preprint"
-month: April
-title: "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios"
-issue: 1
-volume: 1
-year: 2024
+ doi: "10.48550/arXiv.2404.09660"
+ journal: "Arxiv Preprint" 
+ month: 04
+ title: "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios"
+ issue: 1
+ volume: 1
+ year: 2024
 
