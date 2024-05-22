@@ -13,6 +13,7 @@ authors:
   - given-names: Xianglong
     family-names: Wang
     email: xianglong.wang@tumd.de
+    orcid: 'https://orcid.org/0009-0002-9238-4509'
   - given-names: Wolfgang
     family-names: Kellerer
     orcid: 'https://orcid.org/0000-0003-4358-8038'
@@ -28,7 +29,7 @@ preferred-citation:
     orcid: "https://orcid.org/0000-0003-4721-2492"
   - family-names: "Wang"
     given-names: "Xianglong"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0009-0002-9238-4509"
   - family-names: "Kellerer"
     given-names: "Wolfgang"
     orcid: "https://orcid.org/0000-0003-4358-8038"
