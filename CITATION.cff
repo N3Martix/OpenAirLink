@@ -33,11 +33,11 @@ preferred-citation:
   - family-names: "Kellerer"
     given-names: "Wolfgang"
     orcid: "https://orcid.org/0000-0003-4358-8038"
- doi: "10.48550/arXiv.2404.09660"
- journal: "Arxiv Preprint" 
- month: 04
+ doi: "10.23919/IFIPNetworking62109.2024.10619070"
+ journal: "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios" 
+ month: 06
  title: "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios"
- issue: 1
- volume: 1
+ issue: 
+ volume: 
  year: 2024
 
