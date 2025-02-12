@@ -73,7 +73,7 @@ The OpenAirLink's channel configuration has two models:
 Please use the citation file provided in the repository. For quick access: 
 
 ```
-Deshpande, Y., Wang, X., & Kellerer, W. (2024). OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios. arXiv preprint arXiv:2404.09660.
+Y. Deshpande, X. Wang and W. Kellerer, "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios," 2024 IFIP Networking Conference (IFIP Networking), Thessaloniki, Greece, 2024, pp. 1-6, doi: 10.23919/IFIPNetworking62109.2024.10619070.
 ```
 
 ## Contributors 
